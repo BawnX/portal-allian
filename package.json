@@ -7,10 +7,17 @@
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "commit": "cz",
+    "patch": "standard-version --release-as patch",
+    "minor": "standard-version --release-as minor",
+    "major": "standard-version --release-as major"
   },
   "dependencies": {
-    "vue": "3.2.37"
+    "@vueuse/head": "^0.7.9",
+    "vite-ssr": "^0.16.0",
+    "vue": "3.2.37",
+    "vue-router": "4"
   },
   "devDependencies": {
     "@commitlint/cli": "17.0.3",
