@@ -1,18 +1,26 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
-    "useDefineForClassFields": true,
-    "module": "ESNext",
-    "moduleResolution": "Node",
+    "removeComments": true,
+    "forceConsistentCasingInFileNames": true,
+    "target": "esnext",
+    "module": "CommonJS",
     "strict": true,
-    "jsx": "preserve",
-    "sourceMap": true,
-    "resolveJsonModule": true,
+    "strictBindCallApply": true,
+    "importHelpers": true,
+    "moduleResolution": "node",
     "isolatedModules": true,
+    "skipLibCheck": true,
     "esModuleInterop": true,
-    "lib": ["ESNext", "DOM"],
-    "skipLibCheck": true
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "baseUrl": "./src",
+    "types": ["vite/client", "@intlify/vite-plugin-vue-i18n/client"],
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "lib": ["esnext", "dom", "dom.iterable", "scripthost"]
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["vite.config.*", "src/**/*", "src/**/*.vue"],
+  "exclude": ["node_modules", "**/*.stories.ts"]
 }
