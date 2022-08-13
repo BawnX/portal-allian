@@ -3,7 +3,7 @@
     "removeComments": true,
     "forceConsistentCasingInFileNames": true,
     "target": "esnext",
-    "module": "CommonJS",
+    "module": "esnext",
     "strict": true,
     "strictBindCallApply": true,
     "importHelpers": true,
@@ -14,7 +14,7 @@
     "allowSyntheticDefaultImports": true,
     "resolveJsonModule": true,
     "sourceMap": true,
-    "baseUrl": "./src",
+    "baseUrl": "./",
     "types": ["vite/client", "@intlify/vite-plugin-vue-i18n/client"],
     "paths": {
       "@/*": ["src/*"]
