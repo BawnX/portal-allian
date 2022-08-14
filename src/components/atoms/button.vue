@@ -24,7 +24,7 @@ const staticClass =
 const wrapperClass = computed(() => {
   const rounded = props.isRounded ? "rounded-full" : "rounded";
   if (props.type === "primary") {
-    return `${staticClass} ${rounded} bg-dark-color hover:bg-dark-color bg-primary text-light-color`;
+    return `${staticClass} ${rounded} dark:bg-secondary dark:hover:bg-primary hover:bg-secondary bg-primary text-light-color`;
   }
   return `${staticClass} ${rounded}`;
 });

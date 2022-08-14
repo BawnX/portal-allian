@@ -6,12 +6,12 @@ import "./assets/main.style.css";
 import { ViteSSG } from "vite-ssg";
 
 const i18n = createI18n({
-	locale: localStorage.locale || "en",
-	messages,
+  locale: localStorage.locale || "en",
+  messages,
 });
 
 export const app = ViteSSG(App, { routes }, ({ app }) => {
-	app.use(i18n);
+  app.use(i18n);
 });
 
 export default app;

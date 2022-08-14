@@ -23,6 +23,7 @@ module.exports = {
       yellow: colors.amber,
       pink: colors.fuchsia,
       primary: "hsl(184.8,80.8%,30.6%)",
+      secondary: "hsl(207, 69%, 35%)"
     },
     fontFamily: {
       balooChettan: ["baloo-chettan", "sans-serif"],
