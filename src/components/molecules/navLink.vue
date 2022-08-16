@@ -4,7 +4,7 @@
       v-for="link in links"
       :key="link.text"
       :redirect="link.redirect"
-      class="mr-5 hover:text-gray-900"
+      class="mr-5 hover:text-gray-600 dark:hover:text-gray-400"
     >
       <span>{{ link.text }}</span>
     </link-component>

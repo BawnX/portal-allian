@@ -4,7 +4,11 @@
     style="height: 100vh"
   >
     <header>
-      <navbar-component :change-mode-theme="setDarkMode" :links="links" />
+      <navbar-component
+        :change-mode-theme="setDarkMode"
+        :links="links"
+        :is-dark-mode="isDarkMode"
+      />
     </header>
   </div>
 </template>
@@ -13,11 +17,15 @@
 import { useTheme } from "@/services/commons/useTheme";
 import NavbarComponent from "@/components/organisms/navbar.vue";
 
-const { setDarkMode } = useTheme();
+const { setDarkMode, isDarkMode } = useTheme();
 const links = [
   {
-    text: "link",
+    text: "Precios",
     redirect: "/",
+  },
+  {
+    text: "",
+    redirect: "",
   },
 ];
 </script>
