@@ -2,7 +2,7 @@
   <div
     class="mx-auto flex flex-wrap py-2.5 px-8 flex-col md:flex-row items-center font-medium"
   >
-    <link-component redirect="/">
+    <link-component :redirect="locale">
       <logo-component />
     </link-component>
 
@@ -16,6 +16,26 @@
       <sun-icon v-if="!isDarkMode" class="hover:text-gray-600" />
       <moon-icon v-if="isDarkMode" class="hover:text-gray-400" />
     </button-component>
+
+    <button-component :is-rounded="true">
+      {{ t("portal.redirect") }}
+    </button-component>
+
+    <button-component
+      :is-rounded="true"
+      :type="'transparent'"
+      @click="setLocale('es')"
+    >
+      ES
+    </button-component>
+    |
+    <button-component
+      :is-rounded="true"
+      :type="'transparent'"
+      @click="setLocale('en')"
+    >
+      EN
+    </button-component>
   </div>
 </template>
 
@@ -27,6 +47,9 @@ import NavlinkComponent from "@/components/molecules/navLink.vue";
 import SunIcon from "@/assets/svg/sun.vue";
 import MoonIcon from "@/assets/svg/moon.vue";
 import { defineProps, PropType } from "vue";
+import { useI18n } from "vue-i18n";
+
+const { availableLocales, locale, t } = useI18n<string[]>();
 
 defineProps({
   changeModeTheme: {
@@ -45,4 +68,8 @@ defineProps({
     >,
   },
 });
+
+const setLocale = (language: string) => {
+  locale.value = availableLocales.find((el) => el === language) || "en-US";
+};
 </script>

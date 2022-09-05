@@ -1,8 +1,8 @@
 import vueI18n from "@intlify/vite-plugin-vue-i18n";
 import vue from "@vitejs/plugin-vue";
-import { resolve } from "path";
-import { fileURLToPath, URL } from "url";
-import { defineConfig } from "vite";
+import {resolve} from "path";
+import {fileURLToPath, URL} from "url";
+import {defineConfig} from "vite";
 import eslintPlugin from "vite-plugin-eslint";
 import Pages from "vite-plugin-pages";
 
@@ -16,7 +16,11 @@ export default defineConfig({
     }),
     eslintPlugin(),
     Pages({
-      pagesDir: [{ dir: "src/pages", baseRoute: "/" }],
+      pagesDir: [
+        // { dir: "src/pages", baseRoute: "/es" },
+        // { dir: "src/pages", baseRoute: "/en" },
+        { dir: "src/pages", baseRoute: "/" },
+      ],
       extensions: ["vue"],
     }),
   ],

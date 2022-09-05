@@ -1,7 +1,9 @@
-<script setup lang="ts">
+<script lang="ts" setup>
 import AppContainer from "./components/templates/AppContainer.vue";
 </script>
 
 <template>
-  <app-container />
+  <app-container>
+    <router-view></router-view>
+  </app-container>
 </template>

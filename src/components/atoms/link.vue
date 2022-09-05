@@ -1,5 +1,5 @@
 <template>
-  <router-link :to="redirect">
+  <router-link :to="{ name: redirect }">
     <slot />
   </router-link>
 </template>

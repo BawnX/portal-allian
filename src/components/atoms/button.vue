@@ -30,7 +30,7 @@ const wrapperClass = computed(() => {
   const size =
     props.size === "small" ? "h-8" : props.size === "normal" ? "h-11" : "h-15";
   if (props.type === "primary") {
-    return `${staticClass} ${rounded} ${size} dark:bg-secondary dark:hover:bg-primary hover:bg-secondary bg-primary text-light-color`;
+    return `${staticClass} ${rounded} ${size} dark:bg-primary dark:hover:bg-secondary hover:bg-secondary bg-primary text-light-color`;
   }
 
   if (props.type === "transparent") {

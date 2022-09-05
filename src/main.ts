@@ -6,7 +6,7 @@ import "./assets/main.style.css";
 import { ViteSSG } from "vite-ssg";
 
 const i18n = createI18n({
-  locale: localStorage.locale || "en",
+  locale: localStorage.locale || "es",
   messages,
 });
 
